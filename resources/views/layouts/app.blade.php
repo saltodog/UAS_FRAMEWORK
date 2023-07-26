@@ -57,7 +57,8 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="../pages/dashboard.html">
+                    <a class="nav-link text-white {{ $active == 'dashboard' ? 'active bg-gradient-primary' : '' }}"
+                    href="{{ url('dashboard') }}">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">dashboard</i>
                         </div>
@@ -83,7 +84,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white " href="{{ url('buku') }}">
+                    <a class="nav-link text-white {{ $active == 'buku' ? 'active bg-gradient-primary' : '' }}" href="{{ url('buku') }}">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">view_in_ar</i>
                         </div>
@@ -91,6 +92,24 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white {{ $active == 'anggota' ? 'active bg-gradient-primary' : '' }}"
+                        href="{{ url('anggota') }}">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">receipt_long</i>
+                        </div>
+                        <span class="nav-link-text ms-1">anggota</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white {{ $active == 'peminjaman' ? 'active bg-gradient-primary' : '' }}"
+                        href="{{ url('peminjaman') }}">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">receipt_long</i>
+                        </div>
+                        <span class="nav-link-text ms-1">peminjaman</span>
+                    </a>
+                </li>
+                {{-- <li class="nav-item">
                     <a class="nav-link text-white " href="../pages/rtl.html">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
@@ -105,7 +124,7 @@
                         </div>
                         <span class="nav-link-text ms-1">Notifications</span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages
                     </h6>
